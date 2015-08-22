@@ -6,42 +6,70 @@
 </p>
 
 <p>
-    Sum two passed ints
+    <a href="http://esolangs.org/wiki/HQ9+">HQ9+</a> is very simple a funny programming language one of the so called <a href="http://esolangs.org">esoteric languages</a>. It implements these four instructions:
+	<ul>
+		<li><strong>h</strong>: prints <a href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">"Hello, world!"</a></li>
+		<li><strong>q</strong>: prints its own source code (<a href="https://en.wikipedia.org/wiki/Quine_(computing)">Quine</a>)</li>
+		<li><strong>9</strong>: prints the complete lyrics to <a href="https://en.wikipedia.org/wiki/99_Bottles_of_Beer">"99 Bottles of Beer"</a> in this form:<br>
+			<textarea data-code="python">
+99 bottles of beer on the wall,
+99 bottles of beer.
+Take one down, pass it around,
+98 bottles of beer on the wall.
+
+98 bottles of beer on the wall,
+98 bottles of beer.
+Take one down, pass it around,
+97 bottles of beer on the wall.
+
+...
+
+1 bottle of beer on the wall,
+1 bottle of beer.
+Take one down, pass it around,
+No bottles of beer on the wall.
+			</textarea></li>
+		<li><strong>+</strong>: increments the accumulator		
+	</ul>
+	Any other character is a syntax error which will to be tested here.<br>
+	Your task is to program an interpreter for this language. You're given its source code in form of a string parameter and your function should output everything the program would have print to a standard output in form of a string.<br>
+	Put newline character ("\n") between each output.
+	
 </p>
 
-<p style="text-align: center;">
-    <img class="for_info_only" title="example" src="{{MEDIA}}example.svg" alt="example" width="392px"/>
-    <img class="for_editor_only" title="example" src="{{MEDIA}}example.svg" alt="example" width="380px"/>
-</p>
-
-<p><i>( Explain input and output values )</i></p>
 <p>
-    <strong>Input: </strong> Two arguments. Both are int
+    <strong>Input: </strong> String: HQ9+ source code of the program
 </p>
 
 <p>
-    <strong>Output: </strong> Int. 
+    <strong>Output: </strong> String: standard output of the program
 </p>
 
 
 
 <div class="for_info_only">
-    <p><i>( Put some usage examples )</i></p>
     <p>
         <strong>Example:</strong>
     </p>
     <textarea data-code="python">
-checkio(3, 2) == 5
-checkio(5, 7) == 12
+hq9plus("h") == "Hello, world!"
+hq9plus("+q+") == "+q+"
+hq9plus("") == ""
+hq9plus("hq") == "Hello, world!\nhq"
     </textarea>
 </div>
 
 <p class="for_info_only">
     <strong>How it is used: </strong>
-    <i>(Here you can explain how it can be used in development and what is usage of this.)</i>
+    <i>Interpreting one programming language in another is crucial for many languages, including Python.</i>
 </p>
 
 <p>
     <strong>Precondition:</strong>
-    <i>Constraints for Input</i>
+    <i>all(char in ("h", "q", "9", "+") for char in source_code)</i>
+</p>
+
+<p>
+    <strong>Hint:</strong>
+    <i>The "+" instruction is a joke as is the language so don't worry about it to much. ;)</i>
 </p>
