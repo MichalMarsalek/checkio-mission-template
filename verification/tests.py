@@ -10,6 +10,10 @@ Each test is dict with
 TESTS = {
     "Basics": [
         {
+            "input": "",
+            "answer": ""
+        },
+        {
             "input": "h",
             "answer": "Hello, world!"
         },
