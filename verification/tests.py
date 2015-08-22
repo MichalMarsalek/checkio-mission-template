@@ -7,7 +7,7 @@ Each test is dict with
     "explanation" -- not necessary key, it's using for additional info in animation.
 """
 
-
+'''
 TESTS = {
     "Basics": [
         {
@@ -51,3 +51,21 @@ def verificator_hq9plus(source_code):
         elif char == "9":
             outputs.append(verificator_bottles())
     return "\n".join(outputs)
+    
+'''
+TESTS = {
+    "Basics": [
+        {
+            "input": "h",
+            "answer": "Hello, world!"
+        },
+        {
+            "input": "q",
+            "answer": "q"
+        },
+        {
+            "input": "+",
+            "answer": ""
+        }
+    ]
+}
