@@ -28,7 +28,9 @@ TESTS = {
         {
             "input": "+",
             "answer": ""
-        },
+        }
+    ],
+    "Edge": [
         {
             "input": "hhhh",
             "answer": "Hello, world!\nHello, world!\nHello, world!\nHello, world!"
